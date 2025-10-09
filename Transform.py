@@ -32,13 +32,13 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]  # adjust if needed
 DEFAULT_INPUT = PROJECT_ROOT / "data" / "staging"
 DEFAULT_OUTPUT_DIR = PROJECT_ROOT / "data" / "processed"
 NUMERIC_COLUMNS = [
-    "calories","protein","fat","sodium","fiber","carbo",
-    "sugars","potass","vitamins","shelf","weight","cups","rating"
+    "calories","protein","fat","sodium","fiber","carbohydrates",
+    "sugars","potassium","vitamins","shelf","weight","cups","rating"
 ]
 REQUIRED_COLUMNS = [
     "name","mfr","type"
 ] + NUMERIC_COLUMNS
-PLACEHOLDER_NEGATIVE_ONE = ["potass"]  # treat -1 in these columns as missing
+PLACEHOLDER_NEGATIVE_ONE = ["potassium"]  # treat -1 in these columns as missing
 
 # -------- LOGGER ----------------------------
 logger = logging.getLogger("transform")
